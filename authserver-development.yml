@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 0
 eureka:
   instance:
     hostname: localhost
@@ -9,13 +9,13 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:9091/eureka/
+      defaultZone: http://service-registry:9091/eureka/
 spring:
   application:
     name: auth-server
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/mymoney_authserver
+    url: jdbc:postgresql://192.168.1.16:5432/mymoney_authserver
     username: postgres
     password: desenv
     hikari:
